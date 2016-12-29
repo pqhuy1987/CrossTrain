@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "15723FEA96D8C6240A217E612FBA765DCC161E85",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4EF5FEE90197E37377292B05205B8C670B24D702" : 0,
+    "15723FEA96D8C6240A217E612FBA765DCC161E85" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7712FF1D-3DCC-466A-865C-F914E632434B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4EF5FEE90197E37377292B05205B8C670B24D702" : "ICrossCommander",
+    "15723FEA96D8C6240A217E612FBA765DCC161E85" : "CrossTrain\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ICrossCommander",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ICrossCommander.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/pqhuy1987\/CrossTrain.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "15723FEA96D8C6240A217E612FBA765DCC161E85"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/YuantongL\/Cross-Train.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4EF5FEE90197E37377292B05205B8C670B24D702"
+    }
+  ]
+}

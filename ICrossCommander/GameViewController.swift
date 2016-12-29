@@ -10,15 +10,19 @@ import UIKit
 import SpriteKit
 
 extension SKNode {
-    class func unarchiveFromFile(_ file : NSString) -> SKNode? {
-        if let path = Bundle.main.path(forResource: file as String, ofType: "sks") {
-            var sceneData = Data(bytesNoCopy: path, count: .DataReadingMappedIfSafe, deallocator: nil)
-            var archiver = NSKeyedUnarchiver(forReadingWithData: sceneData!)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as GameScene
-            archiver.finishDecoding()
-            return scene
+    class func unarchiveFromFile(_ file : String) -> SKNode? {
+        if let url = Bundle.main.url(forResource: file, withExtension: "sks") {
+            do {
+                let sceneData = try Data(contentsOf: url)
+                let archiver = NSKeyedUnarchiver(forReadingWith: sceneData)
+                
+                archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+                let scene = archiver.decodeObject(forKey: NSKeyedArchiveRootObjectKey) as! GameScene
+                archiver.finishDecoding()
+                return scene
+            } catch {
+                return nil
+            }
         } else {
             return nil
         }
@@ -59,11 +63,11 @@ class GameViewController: UIViewController {
         return true
     }
 
-     func supportedInterfaceOrientations() -> Int {
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return Int(UIInterfaceOrientationMask.allButUpsideDown.rawValue)
+            return UIInterfaceOrientationMask(rawValue: UInt(Int(UIInterfaceOrientationMask.allButUpsideDown.rawValue)))
         } else {
-            return Int(UIInterfaceOrientationMask.all.rawValue)
+            return UIInterfaceOrientationMask.all
         }
     }
 
